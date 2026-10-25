@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon sudah ditambahkan di sini -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon.ico" />
+  <meta name="theme-color" content="#002D72" />
+  <meta name="description" content="Hubungi SD Muhammadiyah Kota Kediri. Informasi alamat, telepon, email, dan formulir pertanyaan." />
+  <title>Hubungi Kami - SD Muhammadiyah Kota Kediri</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Link CSS Eksternal -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Inline SVG icon collection -->
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-school" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-6h6v6M3 20h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7L7.1 10a16 16 0 0 0 6 6l1.6-1.9a2 2 0 0 1 1.7-.6l3 .5a2 2 0 0 1 1.6 1.9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <!-- Section Kontak Utama (Form & Info) -->
+    <section class="section" id="kontak" style="padding-top: 140px;">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Hubungi kami</span>
+          <h2>Mari Terhubung dengan Sekolah.</h2>
+          <p>Silakan kirim pertanyaan untuk informasi sekolah, program akademik, atau penerimaan peserta didik baru.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="contact-detail-icon"><svg aria-hidden="true"><use href="#i-pin" /></svg></span>
+              <span><strong>Alamat Sekolah</strong><span>Jl. Kilisuci No.lV/34, Singonegaran, Kec. Pesantren, Kota Kediri, Jawa Timur 64132</span></span>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon"><svg aria-hidden="true"><use href="#i-phone" /></svg></span>
+              <span><strong>Telepon / WhatsApp</strong><span>(0354) 672857</span></span>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon"><svg aria-hidden="true"><use href="#i-mail" /></svg></span>
+              <span><strong>Email</strong><span>info@sdmuhammadiyahkediri.sch.id</span></span>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon"><svg aria-hidden="true"><use href="#i-clock" /></svg></span>
+              <span><strong>Jam Layanan</strong><span>Senin - Jumat, 07.00 - 15.00 WIB</span></span>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form reveal reveal-delay-1" id="contactForm">
+          <div class="form-field"><label for="name">Nama lengkap</label><input id="name" name="name" type="text" placeholder="Masukkan nama Anda" autocomplete="name" required /></div>
+          <div class="form-field"><label for="email">Alamat email</label><input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required /></div>
+          <div class="form-field full"><label for="topic">Topik pertanyaan</label><select id="topic" name="topic" required><option value="" disabled selected>Pilih topik</option><option>Informasi sekolah</option><option>Akademik dan fasilitas</option><option>Penerimaan peserta didik baru</option><option>Lainnya</option></select></div>
+          <div class="form-field full"><label for="message">Pesan</label><textarea id="message" name="message" placeholder="Tuliskan pertanyaan Anda di sini..." required></textarea></div>
+          <div class="form-help">Form ini merupakan demo tampilan. Hubungkan ke email atau backend sekolah sebelum digunakan secara langsung.</div>
+          <div class="form-field full"><button class="btn btn-primary" type="submit">Kirim Pertanyaan <svg aria-hidden="true"><use href="#i-arrow" /></svg></button></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section Google Maps (Tambahan Baru) -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Lokasi Kami</span>
+          <h2>Kunjungi Sekolah Kami.</h2>
+          <p>Temukan lokasi SD Muhammadiyah Kota Kediri melalui peta di bawah ini.</p>
+        </div>
+        <div class="reveal" style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); height: 450px; width: 100%; border: 4px solid var(--white);">
+          <!-- Google Maps Embed menggunakan alamat sekolah -->
+          <iframe src="https://maps.google.com/maps?q=Jl.%20Kilisuci%20No.lV/34,%20Singonegaran,%20Kec.%20Pesantren,%20Kota%20Kediri&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi SD Muhammadiyah Kota Kediri"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section FAQ (Tambahan Baru) -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Pertanyaan Umum</span>
+          <h2>Ada yang bisa kami bantu?</h2>
+          <p>Jawaban singkat untuk pertanyaan yang sering diajukan orang tua dan calon siswa.</p>
+        </div>
+        
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 16px;">
+          <!-- FAQ 1 -->
+          <details style="background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 20px; cursor: pointer; transition: all 0.3s ease;">
+            <summary style="font-weight: 700; color: var(--sapphire); font-family: Montserrat, sans-serif; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              Kapan pendaftaran siswa baru (PPDB) dibuka?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-chevron-down" /></svg>
+            </summary>
+            <p style="margin-top: 16px; color: var(--muted); font-size: 0.9rem; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;">
+              Pendaftaran biasanya dibuka mulai awal tahun ajaran baru. Silakan pantau website atau media sosial resmi kami untuk informasi jadwal terbaru.
+            </p>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details style="background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 20px; cursor: pointer; transition: all 0.3s ease;">
+            <summary style="font-weight: 700; color: var(--sapphire); font-family: Montserrat, sans-serif; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              Apa saja ekstrakurikuler yang tersedia?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-chevron-down" /></svg>
+            </summary>
+            <p style="margin-top: 16px; color: var(--muted); font-size: 0.9rem; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;">
+              Kami menyediakan berbagai ekstrakurikuler seperti Hizbul Wathan (Pramuka), Tapak Suci, Seni Musik/Hadroh, Klub Sains, dan Robotik. Silakan kunjungi halaman Akademik untuk detailnya.
+            </p>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details style="background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 20px; cursor: pointer; transition: all 0.3s ease;">
+            <summary style="font-weight: 700; color: var(--sapphire); font-family: Montserrat, sans-serif; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              Apakah ada program Tahfidz Al-Qur'an?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-chevron-down" /></svg>
+            </summary>
+            <p style="margin-top: 16px; color: var(--muted); font-size: 0.9rem; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px;">
+              Ya, program Tahfidz dan Tahsin Al-Qur'an merupakan salah satu program unggulan kami. Siswa dibimbing secara bertahap sesuai dengan kemampuannya.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas" type="button"><svg aria-hidden="true"><use href="#i-chevron-up" /></svg></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Link JavaScript Eksternal -->
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

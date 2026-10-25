@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon.ico" />
+  <meta name="theme-color" content="#002D72" />
+  <meta name="description" content="Pendaftaran Siswa Baru SD Muhammadiyah Kota Kediri." />
+  <title>Pendaftaran - SD Muhammadiyah Kota Kediri</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Inline SVG icon collection (Minimal untuk halaman ini) -->
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <section class="section section-soft" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 120px;">
+      <div class="container" style="max-width: 650px;">
+        <div class="contact-form reveal" style="padding: 50px 40px; text-align: center; align-items: center; justify-content: center; display: flex; flex-direction: column;">
+          
+          <!-- Ikon Maintenance -->
+          <div class="program-icon" style="width: 80px; height: 80px; border-radius: 24px; background: var(--gold-soft); color: var(--gold-dark); margin-bottom: 24px; animation: float 3s ease-in-out infinite;">
+            <svg aria-hidden="true" style="width: 40px; height: 40px;"><use href="#i-tools" /></svg>
+          </div>
+
+          <span class="eyebrow" style="justify-content: center; margin-bottom: 12px;">Sedang Dalam Perbaikan</span>
+          <h2 style="margin-bottom: 16px; font-size: 1.8rem; line-height: 1.3;">Formulir Pendaftaran Belum Tersedia.</h2>
+          
+          <p style="color: var(--muted); margin-bottom: 30px; font-size: 0.95rem;">
+            Mohon maaf atas ketidaknyamanannya. Saat ini sistem pendaftaran online sedang dalam tahap pengembangan dan pemeliharaan. Silakan kembali lagi nanti atau hubungi pihak sekolah secara langsung.
+          </p>
+
+          <!-- Kotak Kontak Developer -->
+          <div style="background: var(--surface); border: 1px dashed var(--line-strong); border-radius: 12px; padding: 20px; width: 100%; margin-bottom: 30px;">
+            <p style="font-size: 0.85rem; font-weight: 700; color: var(--sapphire); margin-bottom: 8px;">Butuh bantuan teknis segera?</p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 12px;">Silakan hubungi tim Developer / IT Sekolah:</p>
+            <a href="mailto:developer@sekolah.com" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; color: var(--blue); font-weight: 700; font-size: 0.9rem; text-decoration: none;">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="#i-mail" /></svg>
+              developer@sekolah.com
+            </a>
+          </div>
+
+          <a class="btn btn-primary" href="index.html" style="width: 100%;">Kembali ke Beranda</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas" type="button"><svg aria-hidden="true"><use href="#i-chevron-up" /></svg></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* =============================================================
+   DESIGN TOKENS — SD Muhammadiyah Kota Kediri
+   Ubah nilai di file ini untuk memperbarui tema seluruh website.
+   ============================================================= */
+:root {
+  /* Brand palette */
+  --sapphire: #002D72;       /* Deep Sapphire — warna utama */
+  --blue: #1E88E5;           /* Royal Blue Beam — tombol dan aksi */
+  --gold: #F9A825;           /* Golden Pulse — aksen dan sorotan */
+  --white: #FFFFFF;          /* Putih bersih sebagai latar sekunder */
+
+  /* Supporting colors */
+  --ink: #152238;
+  --muted: #68758A;
+  --surface: #F4F8FD;
+  --line: #E4EAF2;
+  --navy-deep: #061630;
+  --blue-soft: #EAF4FF;
+  --blue-pale: #E9F4FF;
+  --gold-soft: #FFF3D7;
+  --gold-pale: #FFF1CF;
+  --gold-dark: #A76900;
+  --gold-deep: #A66A00;
+  --gold-hover: #FFC247;
+  --gold-tint: #FFF0C8;
+  --gold-light: #FFD976;
+  --blue-tint: #EDF5FE;
+  --blue-light: #C4E4FF;
+  --blue-mid: #9CCDF6;
+  --blue-mist: #DDEEFF;
+  --sapphire-mist: #E8EEF8;
+  --sapphire-light: #064A9D;
+  --image-placeholder: #DDEAF8;
+  --surface-bright: #FBFDFF;
+  --line-strong: #DDE5EF;
+  --ink-soft: #334158;
+  --muted-light: #8490A1;
+  --navy-shadow: #07142B;
+
+  /* Typography */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  /* Layout and effects */
+  --container: 1180px;
+  --radius: 22px;
+  --radius-sm: 12px;
+  --radius-lg: 30px;
+  --shadow: 0 18px 55px rgba(0, 45, 114, .12);
+  --shadow-strong: 0 25px 65px rgba(4, 17, 43, .18);
+  --transition-fast: 180ms ease;
+  --transition-base: 250ms ease;
+  --transition-smooth: 350ms ease;
+  --header-offset: 110px;
+}
