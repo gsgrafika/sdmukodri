@@ -151,6 +151,19 @@ body:not(.page-home) .site-header {
 
 /* Dropdown Menu */
 .nav-item-dropdown { position: relative; }
+/* Jembatan tak terlihat agar kursor tidak kehilangan hover saat melewati gap */
+@media (min-width: 941px) {
+  .nav-item-dropdown::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    height: 25px; /* Menutupi jarak 15px + sedikit lebih */
+    background: transparent;
+    z-index: 10;
+  }
+}
 .dropdown-icon { transition: transform 0.3s ease; width: 14px; height: 14px; }
 .nav-item-dropdown:hover .dropdown-icon { transform: rotate(180deg); }
 .dropdown-menu { 
