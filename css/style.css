@@ -418,6 +418,12 @@ body:not(.page-home) main {
   align-items: start; /* KUNCI: Mencegah card memanjang mengikuti card terpanjang */
 }
 
+/* Layout Khusus Visi Misi Desktop */
+.visi-misi-grid {
+  grid-template-columns: 1fr 1.2fr;
+  align-items: stretch;
+}
+
 .program-card { 
   position: relative; 
   overflow: hidden; 
@@ -872,6 +878,14 @@ body:not(.page-home) main {
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; }
   .footer-bottom-links { flex-wrap: wrap; gap: 15px; }
   .hero-student-wrap { max-width: 250px; margin-top: 20px; }
+  /* Perbaikan Visi Misi di Mobile */
+  .visi-misi-grid { 
+    grid-template-columns: 1fr !important; /* Paksa jadi 1 kolom */
+    gap: 20px; 
+  }
+  .visi-misi-grid > div { 
+    padding: 24px !important; /* Sesuaikan padding agar tidak terlalu besar di HP */
+  }
 }
 @media (max-width: 390px) {
   .container { width: calc(100% - 28px); }
