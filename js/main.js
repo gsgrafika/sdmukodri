@@ -74,4 +74,26 @@
       bgSlides[currentSlide].classList.add('active');
     }, 5000); // 5 detik
   }
+
+  // Logika Slider Siswa (Swipe Effect)
+  const studentTrack = document.querySelector('.student-track');
+  const studentSlides = document.querySelectorAll('.student-slide');
+  
+  if (studentTrack && studentSlides.length > 0) {
+    let currentIndex = 0;
+    const totalSlides = studentSlides.length;
+
+    setInterval(() => {
+      currentIndex++;
+      
+      // Jika sudah mencapai slide terakhir, kembalikan ke awal
+      if (currentIndex >= totalSlides) {
+        currentIndex = 0;
+      }
+      
+      // Geser track ke kiri sesuai index (0%, -100%, -200%, dst)
+      studentTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+    }, 4500); // Berganti setiap 4.5 detik
+  }
 })();

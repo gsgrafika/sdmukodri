@@ -245,7 +245,7 @@ body:not(.page-home) main {
   border: 1px solid rgba(255,255,255,.18); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.025); 
 }
 
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(310px, .8fr); align-items: center; gap: 54px; position: relative; z-index: 1; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(320px, 1fr); align-items: center; gap: 40px; position: relative; z-index: 1; }
 .hero-content { max-width: 690px; }
 .hero .eyebrow { color: #C4E4FF; }
 
@@ -263,16 +263,94 @@ body:not(.page-home) main {
 .note-avatar:nth-child(2) { background: #DDEEFF; }
 .note-avatar:nth-child(3) { background: #9CCDF6; }
 
-/* Kotak Foto Statis di Kanan */
-.hero-card-wrap { position: relative; display: flex; align-items: center; justify-content: flex-end; }
-.hero-photo-card { position: relative; width: min(100%, 380px); padding: 10px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); border-radius: 27px; backdrop-filter: blur(9px); transform: rotate(2deg); box-shadow: 0 30px 70px rgba(0,0,0,.24); animation: float 6s ease-in-out infinite; }
-.hero-photo-card img { width: 100%; height: 390px; object-fit: cover; border-radius: 20px; }
-.hero-card-caption { position: absolute; left: -35px; bottom: 35px; display: flex; align-items: center; gap: 12px; padding: 15px 18px; color: var(--ink); background: var(--white); border-radius: 16px; box-shadow: var(--shadow); transform: rotate(-2deg); z-index: 10; }
-.caption-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: #FFF3D7; color: #A76900; }
-.caption-icon svg { width: 22px; }
-.hero-card-caption strong { display: block; color: var(--sapphire); font: 800 .86rem Montserrat, sans-serif; }
-.hero-card-caption span { display: block; margin-top: 3px; color: var(--muted); font-size: .7rem; }
-.floating-dot { position: absolute; width: 16px; height: 16px; right: 10%; top: 10%; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 9px rgba(249,168,37,.16); z-index: 2; }
+/* Slider Siswa Berprestasi (Swipe Effect) */
+.hero-student-wrap { 
+  position: relative; 
+  width: 100%; 
+  max-width: 320px; /* Lebar tetap sesuai permintaan sebelumnya */
+  margin-left: auto; 
+  z-index: 2; 
+  align-self: center; 
+}
+
+.student-slider { 
+  width: 100%; 
+  height: 400px; /* Tinggi kotak dikunci agar tidak melar */
+  border-radius: 12px; 
+  overflow: hidden; /* Menyembunyikan kartu yang ada di luar kotak */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background: var(--white);
+}
+
+.student-track { 
+  display: flex; 
+  width: 100%; 
+  height: 100%; 
+  /* Animasi geser yang mulus (smooth swipe) */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.student-slide { 
+  min-width: 100%; /* Setiap slide memenuhi lebar kotak */
+  height: 100%;
+  display: flex; 
+  flex-direction: column; 
+  background: var(--white); 
+}
+
+/* Foto Siswa */
+.student-image-wrap { 
+  width: 100%; 
+  height: 60%; /* 60% tinggi untuk foto */
+  overflow: hidden; 
+  background: #E2E8F0; 
+}
+
+.student-image-wrap img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center top; 
+}
+
+/* Card Info */
+.student-info-card { 
+  padding: 16px; 
+  height: 40%; /* 40% tinggi untuk teks */
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--white);
+}
+
+.student-info-card h4 { 
+  color: var(--sapphire); 
+  font-size: 1rem; 
+  margin-bottom: 6px; 
+  font-family: Montserrat, sans-serif; 
+}
+
+.student-achievement { 
+  display: inline-block; 
+  color: var(--gold-dark); 
+  background: var(--gold-soft); 
+  font-size: 0.65rem; 
+  font-weight: 800; 
+  padding: 4px 10px; 
+  border-radius: 20px; 
+  margin: 0 auto 10px auto; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+}
+
+.student-info-card p { 
+  color: var(--muted); 
+  font-size: 0.75rem; 
+  line-height: 1.5; 
+  font-style: italic; 
+  margin: 0;
+}
 
 /* Intro strip */
 .intro-strip { position: relative; z-index: 2; margin-top: -1px; color: var(--white); background: var(--sapphire); }
@@ -738,6 +816,9 @@ body:not(.page-home) main {
   .nav-item-dropdown.active .dropdown-icon { 
     transform: rotate(180deg); 
   }
+
+  .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+  .hero-student-wrap { margin: 0 auto; max-width: 280px; }
 }
 
 @media (max-width: 700px) {
@@ -790,6 +871,7 @@ body:not(.page-home) main {
   .footer-brand, .newsletter { grid-column: 1 / -1; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; }
   .footer-bottom-links { flex-wrap: wrap; gap: 15px; }
+  .hero-student-wrap { max-width: 250px; margin-top: 20px; }
 }
 @media (max-width: 390px) {
   .container { width: calc(100% - 28px); }
