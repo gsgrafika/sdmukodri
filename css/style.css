@@ -25,7 +25,7 @@ h1 { font-size: clamp(2.55rem, 5.6vw, 4.7rem); font-weight: 800; }
 h2 { font-size: clamp(2rem, 3.6vw, 3.1rem); font-weight: 800; }
 h3 { font-size: 1.16rem; font-weight: 800; }
 p { margin: 0; }
-.section-heading { max-width: 670px; margin-bottom: 44px; }
+.section-heading { max-width: 800px; margin-bottom: 44px; }
 .section-heading h2 { margin-top: 14px; }
 .section-heading p { color: var(--muted); max-width: 590px; margin-top: 16px; }
 .section-heading.center { margin-inline: auto; text-align: center; }
