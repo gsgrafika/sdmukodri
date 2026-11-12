@@ -903,3 +903,207 @@ body:not(.page-home) main {
   .hero-actions .btn { width: 100%; }
   .facility-grid { grid-template-rows: 220px 170px 170px; }
 }
+
+/* =========================================================
+   REVISI HERO V5 — Bagian Atas Lebih Ringkas, Foto Lebih Dominan
+   ========================================================= */
+
+/* 1. Navbar Warna Utama Brand (Sapphire) */
+.page-home .site-header {
+  background: var(--sapphire);
+  box-shadow: none;
+}
+.page-home .site-header.scrolled {
+  background: rgba(0, 45, 114, 0.95) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.page-home .brand-name { color: var(--white); }
+.page-home .brand-sub { color: var(--gold); }
+.page-home .nav-links > a,
+.page-home .nav-item-dropdown > .nav-link { color: var(--white); }
+.page-home .nav-links > a:hover,
+.page-home .nav-item-dropdown > .nav-link:hover,
+.page-home .nav-links > a.active,
+.page-home .nav-item-dropdown > .nav-link.active { color: var(--gold); }
+.page-home .theme-toggle { color: var(--white); }
+.page-home .theme-toggle:hover { background: rgba(255,255,255,0.1); }
+.page-home .nav-login { color: var(--white); }
+.page-home .nav-login:hover { color: var(--gold); }
+.page-home .nav-divider { background: rgba(255,255,255,0.3); }
+.page-home .menu-toggle { color: var(--white); background: rgba(255,255,255,0.1); }
+
+/* 2. Layout Hero (Lebih Ringkas) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  padding: 85px 0 0 0; /* Padding atas dikurangi drastis agar dekat navbar */
+  background: var(--surface);
+  color: var(--ink);
+  overflow: hidden;
+}
+.hero::before,
+.hero::after { display: none; }
+
+/* Teks Atas */
+.hero-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 24px; /* Jarak teks ke gambar dikurangi */
+}
+
+.hero .hero-title {
+  margin: 0;
+  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(2.3rem, 4.5vw, 3.8rem); /* Ukuran judul sedikit dikecilkan */
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--sapphire);
+}
+.hero .hero-title em {
+  font-style: italic;
+  color: var(--sapphire);
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Jarak antar elemen di kanan dirapatkan */
+  align-items: flex-start;
+}
+.hero-side .hero-copy {
+  max-width: 440px;
+  color: var(--ink-soft);
+  font-size: 0.9rem; /* Teks paragraf sedikit dikecilkan */
+  line-height: 1.5;
+  margin: 0;
+}
+.hero-side .hero-actions {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Shadow Tombol Lembut */
+.btn-dark {
+  color: var(--white);
+  background: var(--sapphire);
+  border: 1px solid var(--sapphire);
+  box-shadow: 0 4px 12px rgba(0, 45, 114, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.btn-dark:hover { 
+  background: var(--navy-deep); 
+  border-color: var(--navy-deep);
+  box-shadow: 0 6px 16px rgba(0, 45, 114, 0.15); 
+}
+
+/* CTA Link Klasik */
+.link-underline {
+  display: inline-flex;
+  align-items: center;
+  color: var(--sapphire);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.link-underline:hover { color: var(--blue); }
+.link-underline:hover::after { width: 0; }
+
+/* 3. Gambar Slider Lebih Tinggi (Mengisi Sisa Layar) */
+.hero-gallery {
+  position: relative;
+  width: 100%;
+  height: 82vh; /* Ditinggikan agar foto sangat dominan saat discroll */
+  min-height: 500px;
+  overflow: hidden;
+  background: var(--sapphire-mist);
+}
+.hero-gallery-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hero-gallery-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.hero-gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Panah Mewah Tanpa Background */
+.hero-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+}
+.hero-gallery-arrow:hover {
+  color: var(--gold);
+  transform: translateY(-50%) scale(1.15);
+}
+.hero-gallery-arrow.prev { left: 40px; }
+.hero-gallery-arrow.next { right: 40px; }
+.hero-gallery-arrow svg { width: 48px; height: 48px; }
+
+/* --- Responsif --- */
+@media (max-width: 940px) {
+  .hero { padding-top: 80px; }
+  .hero-top {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+  .hero-gallery { height: 75vh; min-height: 400px; }
+  .hero-gallery-arrow { width: 50px; height: 50px; }
+  .hero-gallery-arrow svg { width: 38px; height: 38px; }
+  .hero-gallery-arrow.prev { left: 20px; }
+  .hero-gallery-arrow.next { right: 20px; }
+}
+@media (max-width: 700px) {
+  .hero { padding-top: 75px; }
+  .hero .hero-title { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .hero-gallery { height: 65vh; min-height: 350px; }
+  .hero-gallery-arrow { width: 40px; height: 40px; }
+  .hero-gallery-arrow svg { width: 30px; height: 30px; }
+  .hero-side .hero-actions { width: 100%; gap: 16px; }
+}

@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Link CSS Eksternal -->
   <link rel="stylesheet" href="css/style.css" />
@@ -43,76 +43,42 @@
   <header class="site-header" id="site-header"></header>
 
   <main>
-    <!-- HERO SECTION DIPERBAIKI -->
+    <!-- HERO SECTION (Editorial Light) -->
     <section class="hero" id="beranda">
-      <!-- Background Slider (3 Gambar) -->
-      <div class="hero-bg-slider">
-        <img src="assets/images/hero-slide-1.webp" alt="Suasana Sekolah 1" class="active" />
-        <img src="assets/images/hero-slide-2.webp" alt="Suasana Sekolah 2" />
-        <img src="assets/images/hero-slide-3.webp" alt="Suasana Sekolah 3" />
+      <div class="container">
+        <div class="hero-top">
+          <h1 class="hero-title reveal">Sekolah Berbasis <em>Bakat Alami</em> dan Tahfidz</h1>
+          <div class="hero-side reveal reveal-delay-1">
+            <p class="hero-copy">Selamat datang di website resmi SD Muhammadiyah Kota Kediri. Kami menghadirkan lingkungan belajar yang hangat untuk mendampingi setiap anak mengenali potensi, membangun karakter, dan meraih cita-cita.</p>
+            <div class="hero-actions">
+              <a class="btn btn-dark" href="#profil">Jelajahi Sekolah <svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="link-underline" href="ppdb.html">Informasi PPDB</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <h1>Sekolah Berbasis <span class="accent">Bakat Alami</span> dan Tahfidz</h1>
-          <p class="hero-copy">Selamat datang di website resmi SD Muhammadiyah Kota Kediri. Kami menghadirkan lingkungan belajar yang hangat untuk mendampingi setiap anak mengenali potensi, membangun karakter, dan meraih cita-cita.</p>
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="#profil">Jelajahi Sekolah <svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
-            <a class="btn btn-outline" href="ppdb.html">Informasi PPDB</a>
-          </div>
-          <div class="hero-note">
-            <div class="note-avatars" aria-hidden="true"><span class="note-avatar">SD</span><span class="note-avatar">MI</span><span class="note-avatar">★</span></div>
-            <span>Tempat belajar, bertumbuh, dan berprestasi bersama.</span>
-          </div>
+      <!-- Slider Full Width -->
+      <div class="hero-gallery reveal reveal-delay-2" aria-label="Galeri suasana sekolah">
+        <div class="hero-gallery-track">
+          <figure class="hero-gallery-slide">
+            <img src="assets/images/hero-slide-1.webp" alt="Suasana Sekolah 1" />
+          </figure>
+          <figure class="hero-gallery-slide">
+            <img src="assets/images/hero-slide-2.webp" alt="Suasana Sekolah 2" />
+          </figure>
+          <figure class="hero-gallery-slide">
+            <img src="assets/images/hero-slide-3.webp" alt="Suasana Sekolah 3" />
+          </figure>
         </div>
         
-                <!-- Slider Siswa Berprestasi -->
-        <div class="hero-student-wrap reveal reveal-delay-2" aria-label="Siswa Berprestasi">
-          <div class="student-slider">
-            
-            <!-- Track Pembungkus Swipe -->
-            <div class="student-track">
-              
-              <!-- Slide 1 -->
-              <div class="student-slide">
-                <div class="student-image-wrap">
-                  <img src="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&w=600&q=80" alt="Siswa Berprestasi 1" />
-                </div>
-                <div class="student-info-card">
-                  <h4>Aisyah Putri</h4>
-                  <span class="student-achievement">Juara 1 Olimpiade Matematika</span>
-                  <p>"Belajar di sini sangat menyenangkan, guru-gurunya sabar dan teman-temanku baik."</p>
-                </div>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="student-slide">
-                <div class="student-image-wrap">
-                  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Siswa Berprestasi 2" />
-                </div>
-                <div class="student-info-card">
-                  <h4>Budi Santoso</h4>
-                  <span class="student-achievement">Juara 2 Lomba Tahfidz</span>
-                  <p>"Saya senang bisa menghafal Al-Qur'an bersama teman-teman dan dibimbing ustadz."</p>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="student-slide">
-                <div class="student-image-wrap">
-                  <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" alt="Siswa Berprestasi 3" />
-                </div>
-                <div class="student-info-card">
-                  <h4>Citra Lestari</h4>
-                  <span class="student-achievement">Juara 1 Pidato Bahasa Inggris</span>
-                  <p>"Sekolah ini mengajarkan saya untuk berani dan percaya diri tampil di depan banyak orang."</p>
-                </div>
-              </div>
-
-            </div> <!-- Tutup student-track -->
-          </div>
-        </div>
-
+        <!-- Panah Klasik -->
+        <button class="hero-gallery-arrow prev" id="heroPrev" type="button" aria-label="Foto sebelumnya">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="hero-gallery-arrow next" id="heroNext" type="button" aria-label="Foto berikutnya">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
       </div>
     </section>
 

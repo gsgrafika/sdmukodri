@@ -96,4 +96,37 @@
       
     }, 4500); // Berganti setiap 4.5 detik
   }
+
+    // === Hero Gallery Slider (auto-slide + panah) ===
+  const galleryTrack = document.querySelector('.hero-gallery-track');
+  const gallerySlides = document.querySelectorAll('.hero-gallery-slide');
+  const galleryPrev = document.getElementById('heroPrev');
+  const galleryNext = document.getElementById('heroNext');
+
+  if (galleryTrack && gallerySlides.length > 0) {
+    let galleryIndex = 0;
+    const galleryTotal = gallerySlides.length;
+    let galleryTimer;
+
+    const goToSlide = (index) => {
+      galleryIndex = (index + galleryTotal) % galleryTotal;
+      galleryTrack.style.transform = `translateX(-${galleryIndex * 100}%)`;
+    };
+
+    const startGalleryAuto = () => {
+      window.clearInterval(galleryTimer);
+      galleryTimer = window.setInterval(() => goToSlide(galleryIndex + 1), 5000);
+    };
+
+    if (galleryNext) galleryNext.addEventListener('click', () => {
+      goToSlide(galleryIndex + 1);
+      startGalleryAuto();
+    });
+    if (galleryPrev) galleryPrev.addEventListener('click', () => {
+      goToSlide(galleryIndex - 1);
+      startGalleryAuto();
+    });
+
+    startGalleryAuto();
+  }
 })();
