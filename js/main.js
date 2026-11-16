@@ -129,4 +129,28 @@
 
     startGalleryAuto();
   }
+
+    // === Logika Sembunyikan Navbar saat di Area Slider Hero ===
+  const heroGallery = document.querySelector('.hero-gallery');
+  const introStrip = document.querySelector('.intro-strip');
+
+  if (siteHeader && heroGallery && introStrip) {
+    const handleNavbarHide = () => {
+      // Dapatkan posisi atas galeri dan posisi bawah strip
+      const galleryTop = heroGallery.offsetTop - 50;
+      const stripBottom = introStrip.offsetTop + introStrip.offsetHeight;
+      const scrollPos = window.scrollY;
+
+      // Jika layar sedang berada di area galeri hingga strip selesai
+      if (scrollPos >= galleryTop && scrollPos < stripBottom) {
+        siteHeader.classList.add('navbar-hidden');
+      } else {
+        siteHeader.classList.remove('navbar-hidden');
+      }
+    };
+    
+    // Jalankan saat di-scroll
+    window.addEventListener('scroll', handleNavbarHide, { passive: true });
+    handleNavbarHide(); // Cek saat pertama kali halaman dimuat
+  }
 })();

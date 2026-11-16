@@ -1107,3 +1107,152 @@ body:not(.page-home) main {
   .hero-gallery-arrow svg { width: 30px; height: 30px; }
   .hero-side .hero-actions { width: 100%; gap: 16px; }
 }
+
+/* =========================================================
+   REVISI TAHAP 1: Sambutan, Berita, & Hide Navbar
+   ========================================================= */
+
+/* 1. Sembunyikan Navbar saat di area Slider/Strip */
+.site-header {
+  /* Tambahkan transisi transform dan opacity agar animasi hide-nya mulus */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease, transform 0.4s ease, opacity 0.4s ease !important;
+}
+.site-header.navbar-hidden {
+  transform: translateY(-100%); /* Geser navbar ke atas keluar layar */
+  opacity: 0;
+  pointer-events: none; /* Agar tidak bisa diklik saat sembunyi */
+}
+
+/* 2. Layout Grid Sambutan & Berita */
+#sambutan-berita {
+  padding: 80px 0;
+  background: var(--white);
+}
+.sambutan-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Kiri 2/3, Kanan 1/3 */
+  gap: 50px;
+  align-items: start;
+}
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  color: var(--sapphire);
+  margin-bottom: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* 3. Styling Kolom Kiri (Kepala Sekolah) */
+.kepsek-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+.kepsek-foto-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--gold);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.kepsek-foto-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kepsek-info h3 {
+  font-size: 1.15rem;
+  color: var(--sapphire);
+  margin-bottom: 4px;
+}
+.kepsek-info span {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.kepsek-teks {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.kepsek-teks p {
+  margin-bottom: 15px;
+}
+.kepsek-teks .salam, 
+.kepsek-teks .wasalam {
+  font-weight: 700;
+  color: var(--sapphire);
+  font-style: italic;
+}
+
+/* 4. Styling Kolom Kanan (Berita) */
+.berita-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.berita-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--line);
+  transition: transform 0.2s ease;
+}
+.berita-item:hover {
+  transform: translateX(5px); /* Efek geser saat dihover */
+}
+.berita-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.berita-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.berita-date {
+  font-size: 0.7rem;
+  color: var(--gold-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 4px;
+}
+.berita-content h4 {
+  font-size: 0.88rem;
+  color: var(--sapphire);
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+.berita-item:hover .berita-content h4 {
+  color: var(--blue);
+}
+
+/* 5. Responsif untuk HP & Tablet */
+@media (max-width: 940px) {
+  .sambutan-grid {
+    grid-template-columns: 1fr; /* Jadi 1 kolom di HP/Tablet */
+    gap: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .kepsek-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
