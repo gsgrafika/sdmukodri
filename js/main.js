@@ -63,41 +63,7 @@
     });
   }
 
-  // Slider Otomatis Hero Background
-  const bgSlides = document.querySelectorAll('.hero-bg-slider img');
-  if (bgSlides.length > 0) {
-    let currentSlide = 0;
-    
-    setInterval(() => {
-      bgSlides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % bgSlides.length;
-      bgSlides[currentSlide].classList.add('active');
-    }, 5000); // 5 detik
-  }
-
-  // Logika Slider Siswa (Swipe Effect)
-  const studentTrack = document.querySelector('.student-track');
-  const studentSlides = document.querySelectorAll('.student-slide');
-  
-  if (studentTrack && studentSlides.length > 0) {
-    let currentIndex = 0;
-    const totalSlides = studentSlides.length;
-
-    setInterval(() => {
-      currentIndex++;
-      
-      // Jika sudah mencapai slide terakhir, kembalikan ke awal
-      if (currentIndex >= totalSlides) {
-        currentIndex = 0;
-      }
-      
-      // Geser track ke kiri sesuai index (0%, -100%, -200%, dst)
-      studentTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-      
-    }, 4500); // Berganti setiap 4.5 detik
-  }
-
-    // === Hero Gallery Slider (auto-slide + panah) ===
+  // === Hero Gallery Slider (auto-slide + panah) ===
   const galleryTrack = document.querySelector('.hero-gallery-track');
   const gallerySlides = document.querySelectorAll('.hero-gallery-slide');
   const galleryPrev = document.getElementById('heroPrev');

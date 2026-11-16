@@ -211,155 +211,6 @@ body:not(.page-home) main {
   padding-top: 90px;
 }
 
-/* Hero */
-.hero {
-  position: relative; 
-  overflow: hidden; 
-  min-height: 100vh; /* Memenuhi 1 layar penuh */
-  display: flex; 
-  align-items: center; /* Konten di tengah secara vertikal */
-  padding: 120px 0 80px; /* Spacing atas disesuaikan navbar */
-  color: var(--white); 
-  background: var(--sapphire);
-  isolation: isolate;
-}
-
-/* Background Slider */
-.hero-bg-slider {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: -2; /* Di belakang overlay */
-}
-.hero-bg-slider img {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.hero-bg-slider img.active {
-  opacity: 1;
-}
-
-/* Overlay Gelap agar Teks Terbaca */
-.hero::before {
-  content: ""; position: absolute; z-index: -1; inset: 0;
-  background: linear-gradient(90deg, rgba(0, 28, 73, .95) 0%, rgba(0, 45, 114, .85) 50%, rgba(0, 45, 114, .30) 100%);
-}
-
-/* Ornamen Lingkaran */
-.hero::after { 
-  content: ""; position: absolute; z-index: 0; pointer-events: none; width: 530px; height: 530px; right: -150px; bottom: -290px; 
-  border: 1px solid rgba(255,255,255,.18); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.025); 
-}
-
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(320px, 1fr); align-items: center; gap: 40px; position: relative; z-index: 1; }
-.hero-content { max-width: 690px; }
-.hero { color: #C4E4FF; }
-
-.hero h1 { 
-  color: var(--white); 
-  margin: 20px 0 22px; 
-  font-size: clamp(2.2rem, 4.5vw, 4rem); 
-}
-.hero h1 .accent { color: var(--gold); }
-.hero-copy { max-width: 590px; color: rgba(255,255,255,.85); font-size: 1rem; line-height: 1.5; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
-.hero-note { display: flex; align-items: center; gap: 13px; margin-top: 38px; color: rgba(255,255,255,.8); font-size: .8rem; }
-.note-avatars { display: flex; padding-left: 2px; }
-.note-avatar { display: grid; place-items: center; width: 31px; height: 31px; margin-left: -4px; border: 2px solid var(--sapphire); border-radius: 50%; color: var(--sapphire); background: var(--gold); font-size: 9px; font-weight: 800; }
-.note-avatar:nth-child(2) { background: #DDEEFF; }
-.note-avatar:nth-child(3) { background: #9CCDF6; }
-
-/* Slider Siswa Berprestasi (Swipe Effect) */
-.hero-student-wrap { 
-  position: relative; 
-  width: 100%; 
-  max-width: 320px; /* Lebar tetap sesuai permintaan sebelumnya */
-  margin-left: auto; 
-  z-index: 2; 
-  align-self: center; 
-}
-
-.student-slider { 
-  width: 100%; 
-  height: 400px; /* Tinggi kotak dikunci agar tidak melar */
-  border-radius: 12px; 
-  overflow: hidden; /* Menyembunyikan kartu yang ada di luar kotak */
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  background: var(--white);
-}
-
-.student-track { 
-  display: flex; 
-  width: 100%; 
-  height: 100%; 
-  /* Animasi geser yang mulus (smooth swipe) */
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); 
-}
-
-.student-slide { 
-  min-width: 100%; /* Setiap slide memenuhi lebar kotak */
-  height: 100%;
-  display: flex; 
-  flex-direction: column; 
-  background: var(--white); 
-}
-
-/* Foto Siswa */
-.student-image-wrap { 
-  width: 100%; 
-  height: 60%; /* 60% tinggi untuk foto */
-  overflow: hidden; 
-  background: #E2E8F0; 
-}
-
-.student-image-wrap img { 
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  object-position: center top; 
-}
-
-/* Card Info */
-.student-info-card { 
-  padding: 16px; 
-  height: 40%; /* 40% tinggi untuk teks */
-  text-align: center; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: var(--white);
-}
-
-.student-info-card h4 { 
-  color: var(--sapphire); 
-  font-size: 1rem; 
-  margin-bottom: 6px; 
-  font-family: Montserrat, sans-serif; 
-}
-
-.student-achievement { 
-  display: inline-block; 
-  color: var(--gold-dark); 
-  background: var(--gold-soft); 
-  font-size: 0.65rem; 
-  font-weight: 800; 
-  padding: 4px 10px; 
-  border-radius: 20px; 
-  margin: 0 auto 10px auto; 
-  text-transform: uppercase; 
-  letter-spacing: 0.05em; 
-}
-
-.student-info-card p { 
-  color: var(--muted); 
-  font-size: 0.75rem; 
-  line-height: 1.5; 
-  font-style: italic; 
-  margin: 0;
-}
-
 /* Intro strip */
 .intro-strip { position: relative; z-index: 2; margin-top: -1px; color: var(--white); background: var(--sapphire); }
 .intro-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.16); }
@@ -1109,150 +960,350 @@ body:not(.page-home) main {
 }
 
 /* =========================================================
-   REVISI TAHAP 1: Sambutan, Berita, & Hide Navbar
+   REVISI TAHAP 1.5: Desain Sambutan & Berita Profesional
    ========================================================= */
 
-/* 1. Sembunyikan Navbar saat di area Slider/Strip */
-.site-header {
-  /* Tambahkan transisi transform dan opacity agar animasi hide-nya mulus */
-  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease, transform 0.4s ease, opacity 0.4s ease !important;
-}
-.site-header.navbar-hidden {
-  transform: translateY(-100%); /* Geser navbar ke atas keluar layar */
-  opacity: 0;
-  pointer-events: none; /* Agar tidak bisa diklik saat sembunyi */
-}
-
-/* 2. Layout Grid Sambutan & Berita */
+/* Layout Grid Sambutan & Berita */
 #sambutan-berita {
-  padding: 80px 0;
-  background: var(--white);
+  padding: 100px 0;
+  background: var(--white); /* Latar putih bersih */
 }
 .sambutan-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Kiri 2/3, Kanan 1/3 */
-  gap: 50px;
+  grid-template-columns: 1.8fr 1fr; /* Proporsi Kiri lebih besar */
+  gap: 60px;
   align-items: start;
 }
 .section-title {
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-size: 1.8rem;
   color: var(--sapphire);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-family: Montserrat, sans-serif;
   font-weight: 800;
   letter-spacing: -0.03em;
+  position: relative;
+  padding-bottom: 12px;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 3px;
 }
 
-/* 3. Styling Kolom Kiri (Kepala Sekolah) */
+/* --- KOLOM KIRI: Sambutan Kepala Sekolah --- */
+.kepsek-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+/* Ornamen tanda kutip besar di background */
+.kepsek-wrapper::before {
+  content: "“";
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 12rem;
+  color: rgba(0, 45, 114, 0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
 .kepsek-profile {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 25px;
-  background: var(--surface);
-  padding: 20px;
-  border-radius: 16px;
-  border: 1px solid var(--line);
+  gap: 24px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 .kepsek-foto-wrap {
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  border: 3px solid var(--gold);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 4px solid var(--white);
+  box-shadow: 0 8px 24px rgba(0, 45, 114, 0.15);
 }
 .kepsek-foto-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 .kepsek-info h3 {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: var(--sapphire);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-weight: 800;
 }
 .kepsek-info span {
   font-size: 0.85rem;
-  color: var(--muted);
-  font-weight: 600;
+  color: var(--gold-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
+
 .kepsek-teks {
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--ink-soft);
+  position: relative;
+  z-index: 1;
+  text-align: justify;
 }
 .kepsek-teks p {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+}
+.kepsek-teks p:last-child {
+  margin-bottom: 0;
 }
 .kepsek-teks .salam, 
 .kepsek-teks .wasalam {
-  font-weight: 700;
+  font-weight: 800;
   color: var(--sapphire);
   font-style: italic;
+  background: rgba(249, 168, 37, 0.15);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
 }
 
-/* 4. Styling Kolom Kanan (Berita) */
+/* --- KOLOM KANAN: Berita Terkini --- */
 .berita-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 .berita-item {
   display: flex;
-  gap: 15px;
+  gap: 16px;
   align-items: center;
-  padding-bottom: 15px;
-  border-bottom: 1px solid var(--line);
-  transition: transform 0.2s ease;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-decoration: none;
 }
 .berita-item:hover {
-  transform: translateX(5px); /* Efek geser saat dihover */
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 45, 114, 0.08);
+  border-color: rgba(30, 136, 229, 0.3);
 }
 .berita-img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
+  background: var(--surface);
 }
 .berita-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.berita-item:hover .berita-img img {
+  transform: scale(1.08);
+}
+.berita-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .berita-date {
   font-size: 0.7rem;
-  color: var(--gold-dark);
-  font-weight: 800;
+  color: var(--muted);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  display: block;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.berita-date::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
 }
 .berita-content h4 {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--sapphire);
   line-height: 1.4;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
   transition: color 0.2s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Batasi maksimal 2 baris */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .berita-item:hover .berita-content h4 {
   color: var(--blue);
 }
+.btn-lihat-berita {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  background: var(--surface);
+  color: var(--sapphire);
+  font-weight: 800;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-lihat-berita:hover {
+  background: var(--sapphire);
+  color: var(--white);
+}
 
-/* 5. Responsif untuk HP & Tablet */
-@media (max-width: 940px) {
+/* --- Responsif HP & Tablet --- */
+@media (max-width: 1024px) {
   .sambutan-grid {
-    grid-template-columns: 1fr; /* Jadi 1 kolom di HP/Tablet */
-    gap: 40px;
+    grid-template-columns: 1fr; /* Jadi 1 kolom */
+    gap: 50px;
+  }
+  .kepsek-wrapper {
+    padding: 30px;
   }
 }
 @media (max-width: 700px) {
   .kepsek-profile {
     flex-direction: column;
     text-align: center;
+  }
+  .kepsek-foto-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  .kepsek-teks {
+    text-align: left;
+  }
+  .berita-item {
+    padding: 12px;
+  }
+  .berita-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* =========================================================
+   REVISI TAHAP 2: Merapatkan Gap Antar Section
+   ========================================================= */
+
+/* Mengurangi padding section global dari 100px menjadi 70px */
+.section {
+  padding: 70px 0 !important; 
+}
+
+/* Mengurangi padding section sambutan & berita */
+#sambutan-berita {
+  padding: 70px 0 !important;
+}
+
+/* Mengurangi jarak bawah sebelum footer pada section banner */
+.school-life {
+  padding-bottom: 70px !important;
+}
+
+/* Menyesuaikan jarak untuk tampilan di HP (Mobile) */
+@media (max-width: 700px) {
+  .section {
+    padding: 50px 0 !important; /* Sebelumnya 74px */
+  }
+  #sambutan-berita {
+    padding: 50px 0 !important;
+  }
+  .school-life {
+    padding-bottom: 50px !important;
+  }
+}
+
+/* =========================================================
+   REVISI TAHAP 3: Jarak Antar Section Lebih Proporsional
+   ========================================================= */
+
+/* Jarak untuk Desktop */
+.section, #sambutan-berita {
+  padding: 60px 0 !important; /* Dikurangi dari 100px ke 60px */
+}
+.school-life {
+  padding-bottom: 60px !important;
+}
+.section-heading {
+  margin-bottom: 30px !important; /* Jarak judul ke konten lebih dekat */
+}
+
+/* Jarak untuk Mobile (HP) */
+@media (max-width: 700px) {
+  .section, #sambutan-berita {
+    padding: 40px 0 !important; /* Sangat proporsional untuk layar HP */
+  }
+  .school-life {
+    padding-bottom: 40px !important;
+  }
+  .section-heading {
+    margin-bottom: 24px !important;
+  }
+  /* Merapatkan jarak di dalam sambutan */
+  .kepsek-wrapper {
+    padding: 24px 20px !important; 
+  }
+  .kepsek-profile {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* =========================================================
+   REVISI TAHAP 4: Perbaikan Warna Teks Menu Mobile (Terlihat)
+   ========================================================= */
+
+@media (max-width: 940px) {
+  /* Paksa semua teks menu utama di HP menjadi warna Sapphire (Biru Gelap) */
+  .page-home .nav-links > a,
+  .page-home .nav-item-dropdown > .nav-link,
+  .nav-links > a,
+  .nav-item-dropdown > .nav-link {
+    color: var(--sapphire) !important; 
+  }
+
+  /* Warna saat menu di-hover atau sedang aktif */
+  .page-home .nav-links > a:hover,
+  .page-home .nav-item-dropdown > .nav-link:hover,
+  .page-home .nav-links > a.active,
+  .page-home .nav-item-dropdown > .nav-link.active {
+    color: var(--blue) !important; 
+    background: var(--surface) !important;
+  }
+
+  /* Pastikan teks sub-menu (Visi & Misi, Sejarah) juga berwarna gelap */
+  .nav-links .dropdown-menu a {
+    color: var(--ink-soft) !important; 
+  }
+  
+  .nav-links .dropdown-menu a:hover {
+    color: var(--blue) !important;
+    background: var(--surface) !important;
   }
 }
